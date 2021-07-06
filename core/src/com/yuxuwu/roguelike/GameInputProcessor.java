@@ -10,16 +10,16 @@ public class GameInputProcessor implements InputProcessor {
     public boolean keyDown(int keycode) {
         switch (keycode) {
             case Input.Keys.L:
-                protagonistEntity.positionX++;
+                protagonistEntity.move(1, 0);
                 break;
             case Input.Keys.H:
-                protagonistEntity.positionX--;
+                protagonistEntity.move(-1, 0);
                 break;
             case Input.Keys.J:
-                protagonistEntity.positionY--;
+                protagonistEntity.move(0, -1);
                 break;
             case Input.Keys.K:
-                protagonistEntity.positionY++;
+                protagonistEntity.move(0, 1);
                 break;
         }
         return false;
