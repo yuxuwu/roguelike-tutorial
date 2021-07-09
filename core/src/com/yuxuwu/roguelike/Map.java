@@ -8,15 +8,15 @@ public class Map {
     Map() {
         map = new ArrayList<>();
 
-        for (int x = 0; x < 25; x++) {
+        for (int x = 0; x < 100; x++) {
             map.add(new ArrayList<Tile>());
-            for (int y = 0; y < 12; y++) {
+            for (int y = 0; y < 100; y++) {
                 map.get(x).add(Tile.Floor);
             }
         }
 
-        map.get(3).set(4, Tile.Wall);
-        map.get(3).set(5, Tile.Wall);
-        map.get(3).set(6, Tile.Wall);
+        map.get(54).set(54, Tile.Wall);
+        map.get(54).set(55, Tile.Wall);
+        map.get(54).set(56, Tile.Wall);
     }
 }

@@ -2,9 +2,11 @@ package com.yuxuwu.roguelike;
 
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 
 public class GameInputProcessor implements InputProcessor {
     public Entity protagonistEntity;
+    public OrthographicCamera camera;
 
     @Override
     public boolean keyDown(int keycode) {
@@ -21,8 +23,20 @@ public class GameInputProcessor implements InputProcessor {
             case Input.Keys.K:
                 protagonistEntity.move(0, 1);
                 break;
+            case Input.Keys.Q:
+                camera.zoom -= 0.10;
+                break;
+            case Input.Keys.E:
+                camera.zoom += 0.10;
+                break;
         }
+        //camera.zoom = clamp(camera.zoom, 0.1f, 100/camera.viewportWidth);
         return false;
+    }
+    static public float clamp (float value, float min, float max) {
+        if (value < min) return min;
+        if (value > max) return max;
+        return value;
     }
 
     @Override
