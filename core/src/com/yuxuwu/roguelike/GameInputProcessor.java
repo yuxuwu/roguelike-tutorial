@@ -5,41 +5,40 @@ import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 
 public class GameInputProcessor implements InputProcessor {
-    public Entity protagonistEntity;
-    public OrthographicCamera camera;
+    RogueLike game;
 
     @Override
     public boolean keyDown(int keycode) {
         switch (keycode) {
             case Input.Keys.L:
-                protagonistEntity.move(1, 0);
+                game.getProtagonist().move(1, 0, game.getMap());
                 break;
             case Input.Keys.H:
-                protagonistEntity.move(-1, 0);
+                game.getProtagonist().move(-1, 0, game.getMap());
                 break;
             case Input.Keys.J:
-                protagonistEntity.move(0, -1);
+                game.getProtagonist().move(0, -1, game.getMap());
                 break;
             case Input.Keys.K:
-                protagonistEntity.move(0, 1);
+                game.getProtagonist().move(0, 1, game.getMap());
                 break;
             case Input.Keys.Y:
-                protagonistEntity.move(-1 , 1);
+                game.getProtagonist().move(-1 , 1, game.getMap());
                 break;
             case Input.Keys.U:
-                protagonistEntity.move(1, 1);
+                game.getProtagonist().move(1, 1, game.getMap());
                 break;
             case Input.Keys.B:
-                protagonistEntity.move(-1, -1);
+                game.getProtagonist().move(-1, -1, game.getMap());
                 break;
             case Input.Keys.N:
-                protagonistEntity.move(1, -1);
+                game.getProtagonist().move(1, -1, game.getMap());
                 break;
             case Input.Keys.Q:
-                camera.zoom -= 0.10;
+                game.getCamera().zoom -= 0.10;
                 break;
             case Input.Keys.E:
-                camera.zoom += 0.10;
+                game.getCamera().zoom += 0.10;
                 break;
         }
         //camera.zoom = clamp(camera.zoom, 0.1f, 100/camera.viewportWidth);

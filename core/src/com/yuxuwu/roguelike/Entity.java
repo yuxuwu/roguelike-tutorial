@@ -14,8 +14,12 @@ public class Entity {
 
     Entity (Texture texture) { this(0, 0, texture); }
 
-    public void move(int dx, int dy) {
-        this.x += dx;
-        this.y += dy;
+    public void move(int dx, int dy, Map mapRef) {
+        int newX = this.x + dx;
+        int newY = this.y + dy;
+        if(mapRef.getTileAtXY(newX, newY).walkable) {
+            this.x = newX;
+            this.y = newY;
+        }
     }
 }

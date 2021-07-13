@@ -15,13 +15,18 @@ public class RogueLike extends ApplicationAdapter {
 	final int mapWidth = 100;
 	final int mapHeight = 100;
 
-	ArrayList<Entity> entities;
-	Entity protagonist;
-	Map map;
+	private ArrayList<Entity> entities;
+	private Entity protagonist;
+	private Map map;
+	private OrthographicCamera camera;
 
 	private GameInputProcessor gameInputProcessor;
 	private SpriteBatch batch;
-	private OrthographicCamera camera;
+
+	Map getMap() {return map;}
+	OrthographicCamera getCamera() {return camera;}
+	Entity getProtagonist() {return protagonist;}
+	ArrayList<Entity> getEntities() {return entities;}
 
 	@Override
 	public void create () {
@@ -46,8 +51,7 @@ public class RogueLike extends ApplicationAdapter {
 
 
 		// Register entities
-		gameInputProcessor.protagonistEntity = protagonist;
-		gameInputProcessor.camera = camera;
+		gameInputProcessor.game = this;
 
 		// Everyone in their places
 		protagonist.x = 50;

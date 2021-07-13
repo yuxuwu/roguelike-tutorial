@@ -19,4 +19,8 @@ public class Map {
         map.get(54).set(55, Tile.Wall);
         map.get(54).set(56, Tile.Wall);
     }
+
+    Tile getTileAtXY(int x, int y) {
+        return map.get(x).get(y);
+    }
 }
