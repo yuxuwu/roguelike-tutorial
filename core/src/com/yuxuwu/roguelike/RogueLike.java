@@ -33,8 +33,6 @@ public class RogueLike extends ApplicationAdapter {
 		final int w = Gdx.graphics.getWidth();
 		final int h = Gdx.graphics.getHeight();
 		camera = new OrthographicCamera(800, 400);
-		camera.position.set(50*tileSize, 50*tileSize, 0);
-		camera.update();
 
 		/// Game objects
 		// Entities
@@ -59,6 +57,7 @@ public class RogueLike extends ApplicationAdapter {
 	@Override
 	public void render () {
 		ScreenUtils.clear(backgroundColor);
+		camera.position.set(protagonist.x*tileSize + tileSize/2, protagonist.y*tileSize + tileSize/2, 0);
 		camera.update();
 		batch.setProjectionMatrix(camera.combined);
 		batch.begin();
