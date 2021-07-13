@@ -23,6 +23,18 @@ public class GameInputProcessor implements InputProcessor {
             case Input.Keys.K:
                 protagonistEntity.move(0, 1);
                 break;
+            case Input.Keys.Y:
+                protagonistEntity.move(-1 , 1);
+                break;
+            case Input.Keys.U:
+                protagonistEntity.move(1, 1);
+                break;
+            case Input.Keys.B:
+                protagonistEntity.move(-1, -1);
+                break;
+            case Input.Keys.N:
+                protagonistEntity.move(1, -1);
+                break;
             case Input.Keys.Q:
                 camera.zoom -= 0.10;
                 break;
