@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="25" height="12" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
- <tileset firstgid="1" source="Experimental-Spritesheet.tsx"/>
- <layer id="1" name="Tile Layer 1" width="25" height="12">
-  <data encoding="csv">
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,
-9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9
-</data>
+<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-down" width="25" height="12" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="339">
+ <tileset firstgid="1" source="Tiles_Spritesheet.tsx"/>
+ <layer id="6" name="Tiles" width="25" height="12">
+  <data encoding="base64" compression="zlib">
+   eJzjZGBg4KQDNgViZhxyjATkicEsUFoUh7woAXlisBoaTao8OZgaYUPITPSwoYad6Gaih81QjY9RPLAYAPtKDLQ=
+  </data>
  </layer>
 </map>

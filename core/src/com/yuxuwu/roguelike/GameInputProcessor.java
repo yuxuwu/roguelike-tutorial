@@ -1,5 +1,6 @@
 package com.yuxuwu.roguelike;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -11,28 +12,28 @@ public class GameInputProcessor implements InputProcessor {
     public boolean keyDown(int keycode) {
         switch (keycode) {
             case Input.Keys.L:
-                game.getProtagonist().move(1, 0, game.getMap());
+                game.getProtagonist().move(1, 0);
                 break;
             case Input.Keys.H:
-                game.getProtagonist().move(-1, 0, game.getMap());
+                game.getProtagonist().move(-1, 0);
                 break;
             case Input.Keys.J:
-                game.getProtagonist().move(0, -1, game.getMap());
+                game.getProtagonist().move(0, -1);
                 break;
             case Input.Keys.K:
-                game.getProtagonist().move(0, 1, game.getMap());
+                game.getProtagonist().move(0, 1);
                 break;
             case Input.Keys.Y:
-                game.getProtagonist().move(-1 , 1, game.getMap());
+                game.getProtagonist().move(-1 , 1);
                 break;
             case Input.Keys.U:
-                game.getProtagonist().move(1, 1, game.getMap());
+                game.getProtagonist().move(1, 1);
                 break;
             case Input.Keys.B:
-                game.getProtagonist().move(-1, -1, game.getMap());
+                game.getProtagonist().move(-1, -1);
                 break;
             case Input.Keys.N:
-                game.getProtagonist().move(1, -1, game.getMap());
+                game.getProtagonist().move(1, -1);
                 break;
             case Input.Keys.Q:
                 game.getCamera().zoom -= 0.10;
@@ -40,6 +41,8 @@ public class GameInputProcessor implements InputProcessor {
             case Input.Keys.E:
                 game.getCamera().zoom += 0.10;
                 break;
+            case Input.Keys.ESCAPE:
+                Gdx.app.exit();
         }
         //camera.zoom = clamp(camera.zoom, 0.1f, 100/camera.viewportWidth);
         return false;
